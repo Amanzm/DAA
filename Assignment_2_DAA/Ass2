@@ -1,1 +1,53 @@
 
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct Node{
+	int v;
+	Node * next;
+
+
+}Node;
+
+Node * CreateNode(int x){
+
+	Node * t=(Node*)malloc(sizeof(Node));
+	t->v=x;
+	t->next=NULL;
+	
+	
+return t;
+
+}
+
+
+typedef struct Graph {
+
+int V;
+Node** Adj;
+
+
+}Graph;
+
+
+Graph * CreateGraph(int Vertices){
+
+ 	Graph *G=(Graph*)malloc(sizeof(Graph));
+ 	Node ** listOfV=(Node ** )malloc(sizeof(Node *));
+ 	
+ 	G->Adj= listOfV;
+ 	G->V=Vertices;
+ 	
+ 	int i;
+ 	for(i=0;i<Vertices; i++)
+ 		G->Adj[i]=NULL;
+return G;
+}
+
+
+void AddEdge(Graph *G, int s, int d)
+{
+	G->Adj[i]->next=
+	G->Adj[d]=CreateNode(s);
+
+}
